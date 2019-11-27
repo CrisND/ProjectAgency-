@@ -1,0 +1,17 @@
+.nav-link {
+    color: black;
+}
+
+#banner {
+    display: flex; 
+    height: 300px;
+    background: green; 
+    justify-content: center;    
+    align-items: center; 
+}
+
+#serviço .row div {
+    height: 200px;
+    background: gray;
+    color: #fff;
+}
