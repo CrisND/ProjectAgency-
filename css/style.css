@@ -9,9 +9,3 @@
     justify-content: center;    
     align-items: center; 
 }
-
-#serviço .row div {
-    height: 200px;
-    background: gray;
-    color: #fff;
-}
