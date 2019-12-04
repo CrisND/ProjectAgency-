@@ -1,3 +1,19 @@
+<?php
+
+$servicos = [
+  
+  ["imagem"=>"images/blog.svg", "título"=>"Blog", "descrição"=>"descrição do serviço 1"],
+
+  ["imagem"=>"images/undraw_add_to_cart_vkjp.svg", "título"=>"Loja Virtual", "descrição"=>"descrição do serviço 2"],
+
+  ["imagem"=>"images/undraw_about_me_wa29.svg", "título"=>"Sites", "descrição"=>"descrição do serviço 3"]
+
+];
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,41 +56,26 @@
 
     </section>
 
-    <section id="serviço" class="container mt-4">   
+    <section id="serviço" class="container mt-5">   
         <div class="row">
+
+        <?php foreach($servicos as $servico){ ?>
+
             <div class="col-4">
                 <div class="card">
-                    <img src="images/blog.svg" class="card-img-top" alt="...">
+                    <img src="<?php echo $servico["imagem"]; ?>" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Blog</h5>
-                      <p class="card-text">Criamos blogs personalizados</p>
+                      <h5 class="card-title">
+                        <?php echo $servico["título"]; ?>
+                      </h5>
+                      <p class="card-text">
+                        <?php echo $servico["descrição"]; ?>
+                      </p>
                       <a href="#" class="btn btn-primary">Contrate Agora!</a>
                     </div>
                   </div>
             </div>
-
-            <div class="col-4">
-                <div class="card">
-                    <img src="images/undraw_add_to_cart_vkjp.svg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Loja Virtual</h5>
-                      <p class="card-text">Venda seus produtos facil e rápido</p>
-                      <a href="#" class="btn btn-primary">Contrate Agora!</a>
-                    </div>
-                  </div>
-                </div>
-
-            <div class="col-4">
-                <div class="card">
-                    <img src="images/undraw_about_me_wa29.svg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Sites</h5>
-                      <p class="card-text">Sites para sua necessidade</p>
-                      <a href="#" class="btn btn-primary">Contrate Agora!</a>
-                    </div>
-                  </div>
-            </div>
-
+        <?php } ?>
 
         </div>
 
